@@ -5,6 +5,10 @@ const colors = require('colors')
 const connectDB = require('./config/db')
 const {errorHandler} = require('./middleware/errorMiddleware') 
 const port = process.env.PORT || 8000
+const http = require("http");
+
+let size = http.maxHeaderSize;
+console.log('Max HTTP Header size is', size);
 
 connectDB();
 
